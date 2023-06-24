@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # Install dependencies
-pip3.9 install -r requirements.txt
+pip3 install --disable-pip-version-check --target . --upgrade -r requirements.txt
 
 # Build static files (if applicable)
 python manage.py collectstatic --noinput
