@@ -5,7 +5,8 @@
         "src": "build_files.sh",
         "use": "@vercel/static-build",
         "config": {
-          "maxLambdaSize": "15mb"
+          "maxLambdaSize": "15mb",
+          "buildCommand": "chmod +x ./build_files.sh && ./build_files.sh"
         }
       }
     ],
