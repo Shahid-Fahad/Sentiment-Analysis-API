@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Text Analyzer - Results</title>
+    <title>Text Analyzer Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .positive {
+            color: green;
+        }
+
+        .negative {
+            color: red;
+        }
+
+        .neutral {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-    <h1>Text Analyzer - Results</h1>
-    <p>Sentiment: {{ sentiment }}</p>
+    <div class="container">
+        <h1>Text Analyzer Results</h1>
+        <div class="result">
+            <h2>Sentiment Analysis Result:</h2>
+            <p class="{% if sentiment == 'positive' %}positive{% elif sentiment == 'negative' %}negative{% else %}neutral{% endif %}">
+                Sentiment: {{ sentiment }}
+            </p>
+        </div>
+    </div>
 </body>
 </html>

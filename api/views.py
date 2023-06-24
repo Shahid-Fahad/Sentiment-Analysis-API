@@ -21,14 +21,13 @@ def res(request,anatext):
         sentiment_tensor = preds[0]  # Assuming the model predicts sentiment
         
         #labelling sentiment_tensor for meaningfull outcomes
-        sentiment="Neutral"
+        sentiment="Neutral 🙂"
         if sentiment_tensor==1:
-            sentiment="Positive"
+            sentiment="Positive 😁"
         else:
-            sentiment="Negative"
+            sentiment="Negative 😟"
         
         # Render the results in a template
-        #return redirect('analyze',text)
         return render(request, 'results.html', {'sentiment': sentiment})
 
 

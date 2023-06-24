@@ -57,14 +57,16 @@
     </style>
 </head>
 <body>
-    <h1>Text Analyzer</h1>
-    <form method="post" action="{% url 'home'%}">
-        {% csrf_token %}
-        <label for="text-input">Enter Text to Analyze:</label>
-        <br>
-        <input type="text" id="text-input" name="text" placeholder="Type your text here">
-        <br><br>
-        <button type="submit">Analyze</button>
-    </form>
+    <div class="container">
+        <h1>Text Sentiment Analyzer</h1>
+        <form method="post" action="{% url 'home' %}">
+            {% csrf_token %}
+            <label for="text-input">Enter Text to Analyze:</label>
+            <br>
+            <input type="text" id="text-input" name="text" placeholder="Type your text here">
+            <br><br>
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
 </body>
 </html>
