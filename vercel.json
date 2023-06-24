@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "manage.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/analyze",
+        "dest": "/analyze"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/manage.py"
+      }
+    ],
+    "env": {
+      "PYTHON_VERSION": "3.7"
+    }
+  }
