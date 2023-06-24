@@ -5,23 +5,18 @@
         "src": "build_files.sh",
         "use": "@vercel/static-build",
         "config": {
-          "zeroConfig": true
+          "maxLambdaSize": "15mb"
         }
       }
     ],
     "routes": [
       {
-        "src": "/analyze",
-        "methods": ["POST"],
-        "dest": "/api/analyze"
-      },
-      {
         "src": "/(.*)",
-        "dest": "/"
+        "dest": "/build_files.sh"
       }
     ],
-    "env": {
-      "STATSGARY_MODEL_NAME": "StatsGary/setfit-ft-sentinent-eval"
+    "framework": {
+      "command": "./build_files.sh",
+      "root": "."
     }
   }
-  
