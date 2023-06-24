@@ -15,4 +15,3 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Sentiment_Analysis_API.settings
 
 application = get_wsgi_application()
 
-app = application
