@@ -2,21 +2,26 @@
     "version": 2,
     "builds": [
       {
-        "src": "manage.py",
-        "use": "@vercel/python"
+        "src": "build_files.sh",
+        "use": "@vercel/static-build",
+        "config": {
+          "zeroConfig": true
+        }
       }
     ],
     "routes": [
       {
         "src": "/analyze",
-        "dest": "/analyze"
+        "methods": ["POST"],
+        "dest": "/api/analyze"
       },
       {
         "src": "/(.*)",
-        "dest": "/manage.py"
+        "dest": "/"
       }
     ],
     "env": {
-      "PYTHON_VERSION": "3.7"
+      "STATSGARY_MODEL_NAME": "StatsGary/setfit-ft-sentinent-eval"
     }
   }
+  
