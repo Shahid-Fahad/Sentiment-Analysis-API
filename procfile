@@ -1,0 +1,1 @@
+web : gunicorn sentimentanalysisapi.wsgi --log-file-
