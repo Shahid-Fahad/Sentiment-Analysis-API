@@ -1,4 +1,4 @@
-Django==3.2.9
-djangorestframework==3.12.4
+Django==4.2.2
+djangorestframework==3.14.0
 gunicorn==20.1.0
-setfit==0.0.1
+setfit==0.7.0
